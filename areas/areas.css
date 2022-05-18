@@ -1,0 +1,58 @@
+@import url('https://fonts.googleapis.com/css2?family=Roboto:wght@300&display=swap');
+*{
+    padding: 0;
+    margin: 0;
+    font-family: 'Roboto Condensed', sans-serif;
+}
+body{
+    background-image:url(images/background\ .png);
+    
+}
+
+.cursos{
+    text-align: center;
+    color: black;
+    font-size: 250%;
+    background-color: rgb(229,229,229);
+    font-family: 'Roboto Condensed', sans-serif;
+    padding-top: 10px;
+}
+.col{
+    background-color: white;
+    height: 400px;
+    margin: 10px;
+    border-radius: 10px;
+}
+.logoFacul{
+    width: 100%;
+}
+.logo{
+    width: 50px;
+}
+h3{
+    text-align: center;
+}
+
+#head-letras{
+    font-family: 'Roboto Condensed', sans-serif;
+    font-size: large;
+}
+#margem,#margemPrincipal{
+    border: darkgray solid 1px;
+     border-radius: 5px;
+     margin: 3px;
+     cursor:pointer;
+   }
+  
+   #margem:hover{
+     background-color: rgb(127, 123, 123) ;
+   }
+
+   #margemPrincipal:hover{
+     background-color: rgb(127, 123, 123) ;
+   }
+
+.vazio{
+    background-color: rgb(229,229,229) !important;
+}
+   

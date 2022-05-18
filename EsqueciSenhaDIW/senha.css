@@ -1,0 +1,80 @@
+*{
+    margin: 0px;
+    font-family: 'Roboto', sans-serif;
+    font-weight: normal;
+}
+
+body {
+    display:table;
+    width:100%;
+}
+
+.center{
+    justify-content: center;
+    align-items: center;
+    width: 390px;
+    height: 370px;
+    position: absolute;
+    top: 0;
+    bottom: 0;
+    left: 0;
+    right: 0;
+    margin: auto;
+}
+
+.mudarSenha{
+    color: #403866;
+    cursor: default;
+    text-align: center;
+    padding-bottom: 51px;
+    font-size: 40px;
+    font-weight: bold;
+}
+
+#email,#senha,#confirmaSenha{
+    font-weight: bold;
+    font-size: 17px;
+    display: block;
+    width: 340px;
+    height: 50px;
+    background-color: rgba(230,230,230,255);
+    border: none;
+    border-radius: 10px;
+    margin-bottom: 10px;
+    padding-left: 30px;
+    padding-right: 20px;
+}
+
+.checkbox {
+    display: inline-block;
+    cursor: pointer;
+    margin: 0px 5px 1px 5px;
+    vertical-align: middle;
+    position: relative;
+}
+
+
+.legenda-checkbox{
+    font-size: 15px;
+    color: rgba(32, 32, 32, 0.6);
+    vertical-align: center;
+    position: relative;
+}
+
+#button-savep{
+    display: block;
+    background-color: #7d7af3;
+    border: none;
+    width: 390px;
+    height: 60px;
+    border-radius: 10px;
+    margin-top: 12px;
+    cursor: pointer;
+    color: #ffff;
+    font-size: 20px;
+    font-weight: bold;
+}
+
+#button-savep:hover{
+    background-color: #1D0EAC;
+}
