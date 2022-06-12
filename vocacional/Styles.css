@@ -1,10 +1,27 @@
-
-    .body{
-        background-color: rgb(105, 4, 199);
-        font-family: 'Franklin Gothic Medium', 'Arial Narrow', Arial, sans-serif;
+@import url('https://fonts.googleapis.com/css2?family=Roboto:wght@300&display=swap');
+    body{
+        background-image: linear-gradient(180deg, rgb(129,127,254), darkblue);
+        padding-bottom: 10%;
+        align-items: center;
+        font-family: 'Roboto Condensed', sans-serif;
     }
-    .container, .Bloco0_label{
-        color: blue;
+    
+    h1::after{
+        content: '';
+        width: 200px;
+        height: 5px;
+        background: #fff;
+        display: block;
+        margin: 0 auto;
+        box-shadow: 2px 5px 5px black;
+    }
+    .container{
+        color:#fff;
+        text-align: center;
+        text-shadow: 2px 5px 5px black;
+    }
+    .Bloco0_label{
+        color: #fff;
         text-align: center;
     }
     form, .form-quiz {
@@ -56,3 +73,4 @@
         z-index: 101;
         box-shadow: 2px 5px 10px black
     }
+    
