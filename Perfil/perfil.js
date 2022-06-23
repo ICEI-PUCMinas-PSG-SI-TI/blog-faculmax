@@ -19,7 +19,6 @@ const deletaDados = () =>{
         let db = JSON.parse(localStorage.getItem('db'))
         let user = JSON.parse(localStorage.getItem('usuario'));
         for(let i=0;i<db.registro.length;i++){
-            console.log(db.registro)
             if(db.registro[i].nome==user.usuario){
                
                 delete db.registro[i].nome
@@ -58,7 +57,31 @@ function logout(){
     window.location.assign('../paginaPrincipal/principal.html');
 }}
 
+
+// const trocarSenha = ()=>{
+ 
+//     confirm('Tem certeza?')
+//     if(confirm){
+//          let novaSenha=  prompt("Digite sua nova senha: ")
+//         console.log(novaSenha)
+//         let db = JSON.parse(localStorage.getItem('db'))
+//         let user = JSON.parse(localStorage.getItem('usuario'));
+//         for(let i=0;i<db.registro.length;i++){
+//             if(db.registro[i].nome==user.usuario){
+                
+//                 db.registro[i].senha = novaSenha;              
+//                 localStorage.setItem('db',JSON.stringify(db))
+//                 localStorage.setItem('usuario',JSON.stringify(db))
+//                 verficaDados();
+//             }
+            
+//         }
+       
+//      }
+// }
+
 verficaDados();
 
 document.getElementById ('deslogar').addEventListener ('click', logout);
 document.getElementById ('deleteAcc').addEventListener ('click', deletaDados);
+// document.getElementById ('trocaSenha').addEventListener ('click', trocarSenha);

@@ -9,11 +9,7 @@ function formMelhore(){
     if(strMensagens){
         objMensagens = JSON.parse(strMensagens);
     }else{
-            objMensagens = {mensagens:[
-                {nome: "Pedro",email: "pedro@gmail.com",mensagem:"Acho que deveria ser mais rápida."},
-                {nome: "Ana",email: "ana@gmail.com",mensagem:"Acho que deveria ser mais rápida."},
-                {nome: "Gabriel",email: "gabriel@gmail.com",mensagem:"Acho que deveria ser mais rápida."}
-            ]}
+            objMensagens = {mensagens:[]}
     }
     return objMensagens;
 

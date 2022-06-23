@@ -8,11 +8,7 @@ function leDados () {
         objDados = JSON.parse (strDados);
     }
     else {
-        objDados = { registro: [ 
-                        {nome: "João da Silva", email: "gdavi@google.com", senha: "123"}, 
-                        {nome: "Maria das Graças", email: "ggu@google.com", senha: "142"}, 
-                        {nome: "Pedro Gomes", email: "gbren@google.com", senha: "976"} 
-                    ]}
+        objDados = { registro: []}
     }
 
     return objDados;
@@ -25,7 +21,7 @@ function salvaDados (dados) {
 function incluirContato (){
     // Ler os dados do localStorage
     let objDados = leDados();
-
+    
     // Incluir um novo contato
     let strUsuario = document.getElementById ('usuario').value;
     let strEmail = document.getElementById ('email').value;
@@ -36,7 +32,15 @@ function incluirContato (){
         email: strEmail,
         senha: strSenha
     }
-    objDados.registro.push (novoRegistro);
+    let testeUser = JSON.stringify(objDados);
+    console.log(testeUser.match(strEmail))
+    if(testeUser.match(strUsuario)==null && testeUser.match(strEmail)==null){
+       objDados.registro.push (novoRegistro); 
+       linkLogin();
+    }else{
+        alert("Usuário/Email existente")
+    }
+    
 }else{
     
     return;
@@ -47,7 +51,7 @@ function incluirContato (){
     document.getElementById ('email').value='';
     document.getElementById('senha').value='';
     
-    linkLogin();
+   
     
 }
 function linkLogin(){
@@ -57,5 +61,5 @@ function linkLogin(){
 
 // Configura os botões
 
-document.getElementById ('button-registrar').addEventListener ('click', incluirContato,linkLogin);
+document.getElementById ('button-registrar').addEventListener ('click', incluirContato);
 
