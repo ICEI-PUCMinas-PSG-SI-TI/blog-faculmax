@@ -14,8 +14,8 @@ function verLogin() {
 
 verLogin();
 const deletaDados = () => {
-    confirm('Tem certeza?')
-    if (confirm) {
+    
+    if (confirm('Tem certeza?')) {
         let db = JSON.parse(localStorage.getItem('db'))
         let user = JSON.parse(localStorage.getItem('usuario'));
         for (let i = 0; i < db.registro.length; i++) {
@@ -49,8 +49,8 @@ function verficaDados() {
 
 function logout() {
 
-    let confirmar = confirm('Tem certeza?');
-    if (confirmar == true) {
+    
+    if (confirm('Tem certeza?')) {
 
         localStorage.removeItem('usuario');
         window.location.assign('../paginaPrincipal/principal.html');
@@ -60,15 +60,16 @@ function logout() {
 
 const trocarSenha = () => {
 
-    confirm('Tem certeza?')
-    if (confirm) {
+    
+   
+    if (confirm('Tem certeza?')) {
         let novaSenha = prompt("Digite sua nova senha: ")
         console.log(novaSenha)
         let db = JSON.parse(localStorage.getItem('db'))
         let user = JSON.parse(localStorage.getItem('usuario'));
         for (let i = 0; i < db.registro.length; i++) {
             if (db.registro[i].nome == user.usuario) {
-
+             
                 db.registro[i].senha = novaSenha;
                 localStorage.setItem('db', JSON.stringify(db))
                 localStorage.setItem('usuario', JSON.stringify(db))
@@ -82,20 +83,27 @@ const trocarSenha = () => {
 }
 const trocarEmail = () => {
 
-    confirm('Tem certeza?')
-    if (confirm) {
+    
+    if (confirm('Tem certeza?')) {
         let novoEmail = prompt("Digite seu novo Email: ")
 
         let db = JSON.parse(localStorage.getItem('db'))
         let user = JSON.parse(localStorage.getItem('usuario'));
         for (let i = 0; i < db.registro.length; i++) {
-            if (db.registro[i].nome == user.usuario) {
 
+            if (db.registro[i].email == user.maile) {
+
+
+                if(JSON.stringify(db.registro).match(novoEmail)==null){                  
                 db.registro[i].email = novoEmail;
                 localStorage.setItem('db', JSON.stringify(db))
                 localStorage.setItem('usuario', JSON.stringify(db))
                 localStorage.removeItem('usuario');
                 window.location.assign('../paginaPrincipal/principal.html');
+                }else{
+                    alert("Email já está em uso")
+                }
+               
             }
 
         }
