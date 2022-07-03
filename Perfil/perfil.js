@@ -40,7 +40,7 @@ function verficaDados() {
 
 
     let user = JSON.parse(localStorage.getItem('usuario'));
-    console.log(user)
+
 
     document.getElementById("nomePerfil").innerHTML = `Usuário <p style="padding-top:5px;">${user.usuario}</p>  `;
     document.getElementById("loginSenha").innerHTML = user.senha;
@@ -50,7 +50,7 @@ function verficaDados() {
 function logout() {
 
     
-    if (confirm('Tem certeza?')) {
+    if (confirm('Tem certeza?')==true) {
 
         localStorage.removeItem('usuario');
         window.location.assign('../paginaPrincipal/principal.html');
@@ -62,9 +62,9 @@ const trocarSenha = () => {
 
     
    
-    if (confirm('Tem certeza?')) {
+    if (confirm('Tem certeza?')==true) {
         let novaSenha = prompt("Digite sua nova senha: ")
-        console.log(novaSenha)
+
         let db = JSON.parse(localStorage.getItem('db'))
         let user = JSON.parse(localStorage.getItem('usuario'));
         for (let i = 0; i < db.registro.length; i++) {
@@ -84,7 +84,7 @@ const trocarSenha = () => {
 const trocarEmail = () => {
 
     
-    if (confirm('Tem certeza?')) {
+    if (confirm('Tem certeza?')==true) {
         let novoEmail = prompt("Digite seu novo Email: ")
 
         let db = JSON.parse(localStorage.getItem('db'))
