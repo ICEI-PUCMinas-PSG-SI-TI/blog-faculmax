@@ -16,91 +16,245 @@
     <body>
 
         <form>
-            <div class="quiz">
-                <div ng-hide="hideProgress" class="progress">
-                    <div class="progress-bar" role="progressbar" aria-valuenow="60" aria-valuemin="0" aria-valuemax="100" style="width: 0%;">
-                      <span class="sr-only ng-binding">0% completado</span>
+            <div id="bar">
+                <div class="progress" id="progressBar">
+                    <div class="progress-bar">
+                
                     </div>
                   </div>
+                </div>
     
-            <section>
-                <h2 class="title-quest"> 1. Eu gosto da emoção da competição pessoal e da equipe</h2>
-                <div class="btn-group" role="group" aria-label="Basic radio toggle button group">
-                    <input type="radio" class="btn-check" name="answer_1" id="btnradio1_1" autocomplete="off" checked>
-                    <label class="btn btn-outline-primary" class="ng-binding" class="ng-binding" for="btnradio1_1">1</label>
+            <section id="conjunto">
+              <div id="question">
+                <h2 class="title-quest"> 1. Qual país abaixo você desejaria conhecer?</h2>
+                <div  class="answer"  class="btn-group" role="group" aria-label="Basic radio toggle button group">
+                    <input type="radio" class="btn-check" name="answer_1"  id="btnradio1_1" autocomplete="off" checked>
+                    <label class="btn btn-outline-primary"  class="ng-binding" for="btnradio1_1">1. Egito</label>
                   
                     <input type="radio" class="btn-check" name="answer_1" id="btnradio2_1" autocomplete="off">
-                    <label class="btn btn-outline-primary"  class="ng-binding" for="btnradio2_1">2</label>
+                    <label class="btn btn-outline-primary"  class="ng-binding" for="btnradio2_1">2. Israel</label>
                   
                     <input type="radio" class="btn-check" name="answer_1" id="btnradio3_1" autocomplete="off">
-                    <label class="btn btn-outline-primary"  class="ng-binding" for="btnradio3_1">3</label>
+                    <label class="btn btn-outline-primary"  class="ng-binding" for="btnradio3_1">3. Nova Zelândia.</label>
                     
                     <input type="radio" class="btn-check" name="answer_1" id="btnradio4_1" autocomplete="off">
-                    <label class="btn btn-outline-primary"  class="ng-binding" for="btnradio4_1">4</label>
+                    <label class="btn btn-outline-primary"  class="ng-binding" for="btnradio4_1">4. Tailândia.</label>
     
                     <input type="radio" class="btn-check" name="answer_1" id="btnradio5_1" autocomplete="off">
-                    <label class="btn btn-outline-primary"  class="ng-binding" for="btnradio5_1">5</label>
-                  </div>
+                    <label class="btn btn-outline-primary"  class="ng-binding" for="btnradio5_1">5. África do Sul.</label> 
+                    
+                    <h2 class="title-quest"> 2. Quando penso numa profissão, o mais importante para mim é</h2>
+                    <input type="radio" class="btn-check" name="answer_12"  id="btnradio1_12" autocomplete="off" checked>
+                    <label class="btn btn-outline-primary"  class="ng-binding" for="btnradio1_12">1. Obter um bom retorno financeiro e ser bem sucedidol</label>
+                  
+                    <input type="radio" class="btn-check" name="answer_12" id="btnradio2_12" autocomplete="off">
+                    <label class="btn btn-outline-primary"  class="ng-binding" for="btnradio2_12">2. Trabalhar em algo que esteja em evidência no mercado.</label>
+                  
+                    <input type="radio" class="btn-check" name="answer_12" id="btnradio3_12" autocomplete="off">
+                    <label class="btn btn-outline-primary"  class="ng-binding" for="btnradio3_12">3. Fazer algo que gosto, independente do retorno financeiro.</label>
+                    
+                    <input type="radio" class="btn-check" name="answer_12" id="btnradio4_12" autocomplete="off">
+                    <label class="btn btn-outline-primary"  class="ng-binding" for="btnradio4_12">4. Ser muito bem sucedido financeiramente.</label>
     
-                  <h2 class="title-quest"> 2. Eu gosto da emoção da competição pessoal e da equipe</h2>
-                <div class="btn-group" role="group" aria-label="Basic radio toggle button group">
+                    <input type="radio" class="btn-check" name="answer_12" id="btnradio5_12" autocomplete="off">
+                    <label class="btn btn-outline-primary"  class="ng-binding" for="btnradio5_12">5. Poder atuar em minha comunidade.</label>
+
+                    <h2 class="title-quest"> 3. Na escola eu geralmente me destacava por:</h2>
+                    <input type="radio" class="btn-check" name="answer_13"  id="btnradio1_13" autocomplete="off" checked>
+                    <label class="btn btn-outline-primary"  class="ng-binding" for="btnradio1_13">1. Guardaria parte do dinheiro e investiria em um negócio.</label>
+                  
+                    <input type="radio" class="btn-check" name="answer_13" id="btnradio2_13" autocomplete="off">
+                    <label class="btn btn-outline-primary"  class="ng-binding" for="btnradio2_13">2. Dividiria meu dinheiro entre diversas opções de investimento.</label>
+                  
+                    <input type="radio" class="btn-check" name="answer_13" id="btnradio3_13" autocomplete="off">
+                    <label class="btn btn-outline-primary"  class="ng-binding" for="btnradio3_13">3. Guardaria o dinheiro e me dedicaria a atividades que me interessam.</label>
+                    
+                    <input type="radio" class="btn-check" name="answer_13" id="btnradio4_13" autocomplete="off">
+                    <label class="btn btn-outline-primary"  class="ng-binding" for="btnradio4_13">4. Usaria o dinheiro para uma causa nobre.</label>
+    
+                    <input type="radio" class="btn-check" name="answer_13" id="btnradio5_13" autocomplete="off">
+                    <label class="btn btn-outline-primary"  class="ng-binding" for="btnradio5_13">5. Aposentaria e viveria viajando.</label>
+                    <br> <br>
+                    
+                    <button id="button1" type="button" class="btn btn-primary ng-binding">next</button>           
+                  </div>
+                </div>
+
+
+                <div id="question2">
+                  <h2 class="title-quest"> 4. Se eu tivesse que escolher uma atividade para exercer por 6 meses seria:</h2>
+                <div  class="answer" class="btn-group" role="group" aria-label="Basic radio toggle button group">
                     <input type="radio" class="btn-check" name="answer_2" id="btnradio1_2" autocomplete="off" checked>
-                    <label class="btn btn-outline-primary" class="ng-binding"  for="btnradio1_2">1</label>
+                    <label class="btn btn-outline-primary" class="ng-binding"  for="btnradio1_2">1. Reformar uma casa.</label>
                   
                     <input type="radio" class="btn-check" name="answer_2" id="btnradio2_2" autocomplete="off">
-                    <label class="btn btn-outline-primary" class="ng-binding"  for="btnradio2_2">2</label>
+                    <label class="btn btn-outline-primary" class="ng-binding"  for="btnradio2_2">2. Me colocar em contato com pessoas bem-sucedidas.</label>
                   
                     <input type="radio" class="btn-check" name="answer_2" id="btnradio3_2" autocomplete="off">
-                    <label class="btn btn-outline-primary" class="ng-binding"  for="btnradio3_2">3</label>
+                    <label class="btn btn-outline-primary" class="ng-binding"  for="btnradio3_2">3. Algo que pudesse ser realizado em equipe.</label>
                     
                     <input type="radio" class="btn-check" name="answer_2" id="btnradio4_2" autocomplete="off">
-                    <label class="btn btn-outline-primary" class="ng-binding"  for="btnradio4_2">4</label>
+                    <label class="btn btn-outline-primary" class="ng-binding"  for="btnradio4_2">4. Uma atividade com boa remuneração.</label>
     
                     <input type="radio" class="btn-check" name="answer_2" id="btnradio5_2" autocomplete="off">
-                    <label class="btn btn-outline-primary" class="ng-binding"  for="btnradio5_2">5</label>
+                    <label class="btn btn-outline-primary" class="ng-binding"  for="btnradio5_2">5. Uma atividade voluntária e com a qual eu pudesse ajudar o maior número de pessoas.</label>
+
+                    <h2 class="title-quest"> 5. Eu certamente gastaria uma boa parte do meu primeiro salário com:</h2>
+                    <input type="radio" class="btn-check" name="answer_20" id="btnradio1_20" autocomplete="off" checked>
+                    <label class="btn btn-outline-primary" class="ng-binding"  for="btnradio1_20">1. Um jantar para a(o) namorada(o) ou familiares.</label>
+                  
+                    <input type="radio" class="btn-check" name="answer_20" id="btnradio2_20" autocomplete="off">
+                    <label class="btn btn-outline-primary" class="ng-binding"  for="btnradio2_20">2. Investiria em meu desenvolvimento profissional.</label>
+                  
+                    <input type="radio" class="btn-check" name="answer_20" id="btnradio3_20" autocomplete="off">
+                    <label class="btn btn-outline-primary" class="ng-binding"  for="btnradio3_20">3. Uma viagem.</label>
+                    
+                    <input type="radio" class="btn-check" name="answer_20" id="btnradio4_20" autocomplete="off">
+                    <label class="btn btn-outline-primary" class="ng-binding"  for="btnradio4_20">4. Gastaria o mínimo possível.</label>
+    
+                    <input type="radio" class="btn-check" name="answer_20" id="btnradio5_20" autocomplete="off">
+                    <label class="btn btn-outline-primary" class="ng-binding"  for="btnradio5_20">5. Compraria algum produto caro de meu interesse.</label>
+
+                    <h2 class="title-quest"> 6. Se eu tivesse que abrir um destes negócios seria:</h2>
+                    <input type="radio" class="btn-check" name="answer_21" id="btnradio1_21" autocomplete="off" checked>
+                    <label class="btn btn-outline-primary" class="ng-binding"  for="btnradio1_21">1. Uma empresa de internet.</label>
+                  
+                    <input type="radio" class="btn-check" name="answer_21" id="btnradio2_21" autocomplete="off">
+                    <label class="btn btn-outline-primary" class="ng-binding"  for="btnradio2_21">2. Uma fábrica de computadores.</label>
+                  
+                    <input type="radio" class="btn-check" name="answer_21" id="btnradio3_21" autocomplete="off">
+                    <label class="btn btn-outline-primary" class="ng-binding"  for="btnradio3_21">3. Um restaurante.</label>
+                    
+                    <input type="radio" class="btn-check" name="answer_21" id="btnradio4_21" autocomplete="off">
+                    <label class="btn btn-outline-primary" class="ng-binding"  for="btnradio4_21">4. Não ter muito tempo para curtir a vida.</label>
+    
+                    <input type="radio" class="btn-check" name="answer_21" id="btnradio5_21" autocomplete="off">
+                    <label class="btn btn-outline-primary" class="ng-binding"  for="btnradio5_21">5. Escolher a carreira errada e ter que mudar depois</label>
+                    <br> <br>
+
+                    <button id="button2_1" type="button" class="btn btn-primary ng-binding">prev</button><button id="button2_2" type="button" class="btn btn-primary ng-binding">next</button>
+                    
                   </div>
-    
-    
-                  <h2 class="title-quest"> 3. Eu gosto da emoção da competição pessoal e da equipe</h2>
-                <div class="btn-group" role="group" aria-label="Basic radio toggle button group">
+                </div>
+
+
+                <div id="question3">
+                  <h2 class="title-quest"> 7. Qual dos esportes abaixo você mais se identifica?</h2>
+                <div  class="answer" class="btn-group" role="group" aria-label="Basic radio toggle button group">
                     <input type="radio" class="btn-check" name="answer_3" id="btnradio1_3" autocomplete="off" checked>
-                    <label class="btn btn-outline-primary" class="ng-binding"  for="btnradio1_3">1</label>
+                    <label class="btn btn-outline-primary" class="ng-binding"  for="btnradio1_3">1. Futebol.</label>
                   
                     <input type="radio" class="btn-check" name="answer_3" id="btnradio2_3" autocomplete="off">
-                    <label class="btn btn-outline-primary" class="ng-binding"  for="btnradio2_3">2</label>
+                    <label class="btn btn-outline-primary" class="ng-binding"  for="btnradio2_3">2. Lutas.</label>
                   
                     <input type="radio" class="btn-check" name="answer_3" id="btnradio3_3" autocomplete="off">
-                    <label class="btn btn-outline-primary" class="ng-binding"  for="btnradio3_3">3</label>
+                    <label class="btn btn-outline-primary" class="ng-binding"  for="btnradio3_3">3. Natação.</label>
                     
                     <input type="radio" class="btn-check" name="answer_3" id="btnradio4_3" autocomplete="off">
-                    <label class="btn btn-outline-primary" class="ng-binding"  for="btnradio4_3">4</label>
+                    <label class="btn btn-outline-primary" class="ng-binding"  for="btnradio4_3">4. Tênis.</label>
     
                     <input type="radio" class="btn-check" name="answer_3" id="btnradio5_3" autocomplete="off">
-                    <label class="btn btn-outline-primary" class="ng-binding"  for="btnradio5_3">5</label>
-                  </div>
+                    <label class="btn btn-outline-primary" class="ng-binding"  for="btnradio5_3">5. Não gosto de esportes.</label>
 
+                    <h2 class="title-quest"> 8. Em um ambiente onde você não conhece ninguém, você costuma</h2>
+                    <input type="radio" class="btn-check" name="answer_30" id="btnradio1_30" autocomplete="off" checked>
+                    <label class="btn btn-outline-primary" class="ng-binding"  for="btnradio1_30">1. Ficar em um lugar isolado.</label>
                   
-                  <h2 class="title-quest"> 4. Eu gosto da emoção da competição pessoal e da equipe</h2>
-                <div class="btn-group" role="group" aria-label="Basic radio toggle button group">
-                    <input type="radio" class="btn-check" name="answer_4" id="btnradio1_4" autocomplete="off" checked>
-                    <label class="btn btn-outline-primary" class="ng-binding"  for="btnradio1_4">1</label>
+                    <input type="radio" class="btn-check" name="answer_30" id="btnradio2_30" autocomplete="off">
+                    <label class="btn btn-outline-primary" class="ng-binding"  for="btnradio2_30">2. Conversar com alguém que possa lhe introduzir a um grupo.</label>
                   
-                    <input type="radio" class="btn-check" name="answer_4" id="btnradio2_3" autocomplete="off">
-                    <label class="btn btn-outline-primary" class="ng-binding"  for="btnradio2_4">2</label>
-                  
-                    <input type="radio" class="btn-check" name="answer_4" id="btnradio3_4" autocomplete="off">
-                    <label class="btn btn-outline-primary" class="ng-binding"  for="btnradio3_4">3</label>
+                    <input type="radio" class="btn-check" name="answer_30" id="btnradio3_30" autocomplete="off">
+                    <label class="btn btn-outline-primary" class="ng-binding"  for="btnradio3_30">3. Curtir sozinho.</label>
                     
-                    <input type="radio" class="btn-check" name="answer_4" id="btnradio4_4" autocomplete="off">
-                    <label class="btn btn-outline-primary" class="ng-binding"  for="btnradio4_4">4</label>
+                    <input type="radio" class="btn-check" name="answer_30" id="btnradio4_30" autocomplete="off">
+                    <label class="btn btn-outline-primary" class="ng-binding"  for="btnradio4_30">4. Se socializar e conquistar amigos.</label>
     
-                    <input type="radio" class="btn-check" name="answer_4" id="btnradio5_4" autocomplete="off">
-                    <label class="btn btn-outline-primary" class="ng-binding"  for="btnradio5_4">5</label>
+                    <input type="radio" class="btn-check" name="answer_30" id="btnradio5_30" autocomplete="off">
+                    <label class="btn btn-outline-primary" class="ng-binding"  for="btnradio5_30">5. Se sentir incomodado por estar sozinho e vai embora.</label>
+
+                    <h2 class="title-quest"> 9. Em quais destes ambientes você se sente mais a vontade?</h2>
+                    <input type="radio" class="btn-check" name="answer_31" id="btnradio1_31" autocomplete="off" checked>
+                    <label class="btn btn-outline-primary" class="ng-binding"  for="btnradio1_31">1. Em um hospital.</label>
+                  
+                    <input type="radio" class="btn-check" name="answer_31" id="btnradio2_31" autocomplete="off">
+                    <label class="btn btn-outline-primary" class="ng-binding"  for="btnradio2_31">2. Em centros esportivos.</label>
+                  
+                    <input type="radio" class="btn-check" name="answer_31" id="btnradio3_31" autocomplete="off">
+                    <label class="btn btn-outline-primary" class="ng-binding"  for="btnradio3_31">3. Em uma floresta.</label>
+                    
+                    <input type="radio" class="btn-check" name="answer_31" id="btnradio4_31" autocomplete="off">
+                    <label class="btn btn-outline-primary" class="ng-binding"  for="btnradio4_31">4. Em shoppings.</label>
+    
+                    <input type="radio" class="btn-check" name="answer_31" id="btnradio5_31" autocomplete="off">
+                    <label class="btn btn-outline-primary" class="ng-binding"  for="btnradio5_31">5. Em lugares isolados.</label>
+                    <br> <br>
+
+                    <button id="button3_1" type="button" class="btn btn-primary ng-binding">prev</button><button id="button3_2" type="button" class="btn btn-primary ng-binding">next</button>
                   </div>
-                  <div>
-                    <button type="button" class="btn btn-primary ng-binding">NEXT QUESTs</button>
-                  </div>
-            </section>       
+                </div>
+
+                    <div id="question4">
+                      <h2 class="title-quest"> 10. Dentre estas personalidades, a que mais admiro é:</h2>
+                    <div  class="answer" class="btn-group" role="group" aria-label="Basic radio toggle button group">
+                        <input type="radio" class="btn-check" name="answer_40" id="btnradio1_40" autocomplete="off" checked>
+                        <label class="btn btn-outline-primary" class="ng-binding"  for="btnradio1_40">1. Bill Gates.</label>
+                      
+                        <input type="radio" class="btn-check" name="answer_40" id="btnradio2_40" autocomplete="off">
+                        <label class="btn btn-outline-primary" class="ng-binding"  for="btnradio2_40">2. Steve Jobs.</label>
+                      
+                        <input type="radio" class="btn-check" name="answer_40" id="btnradio3_40" autocomplete="off">
+                        <label class="btn btn-outline-primary" class="ng-binding"  for="btnradio3_40">3. Ronaldo.</label>
+                        
+                        <input type="radio" class="btn-check" name="answer_40" id="btnradio4_40" autocomplete="off">
+                        <label class="btn btn-outline-primary" class="ng-binding"  for="btnradio4_40">4. Angelina Jolie.</label>
+        
+                        <input type="radio" class="btn-check" name="answer_40" id="btnradio5_40" autocomplete="off">
+                        <label class="btn btn-outline-primary" class="ng-binding"  for="btnradio5_40">5. Madre Tereza.</label>
+    
+                        <h2 class="title-quest"> 11. Estou fazendo este teste vocacional pois:</h2>
+                        <input type="radio" class="btn-check" name="answer_412" id="btnradio1_412" autocomplete="off" checked>
+                        <label class="btn btn-outline-primary" class="ng-binding"  for="btnradio1_412">1. Não tenho ideia de qual profissão escolher</label>
+                      
+                        <input type="radio" class="btn-check" name="answer_412" id="btnradio2_412" autocomplete="off">
+                        <label class="btn btn-outline-primary" class="ng-binding"  for="btnradio2_412">2. Estou na dúvida entre duas profissões.</label>
+                      
+                        <input type="radio" class="btn-check" name="answer_412" id="btnradio3_412" autocomplete="off">
+                        <label class="btn btn-outline-primary" class="ng-binding"  for="btnradio3_412">3. Estou na dúvida entre 3 profissões ou mais.</label>
+                        
+                        <input type="radio" class="btn-check" name="answer_412" id="btnradio4_412" autocomplete="off">
+                        <label class="btn btn-outline-primary" class="ng-binding"  for="btnradio4_412">4. Sei qual profissão me interessa, mas não tenho certeza.</label>
+        
+                        <input type="radio" class="btn-check" name="answer_412" id="btnradio5_412" autocomplete="off">
+                        <label class="btn btn-outline-primary" class="ng-binding"  for="btnradio5_412">5. Estou certo de qual profissão eu quero, apenas pretendo conferir.</label>
+    
+                        <h2 class="title-quest"> 12. Procuro fazer amigos que:</h2>
+                        <input type="radio" class="btn-check" name="answer_42" id="btnradio1_42" autocomplete="off" checked>
+                        <label class="btn btn-outline-primary" class="ng-binding"  for="btnradio1_42">1. Possuem status e são influentes.</label>
+                      
+                        <input type="radio" class="btn-check" name="answer_42" id="btnradio2_42" autocomplete="off">
+                        <label class="btn btn-outline-primary" class="ng-binding"  for="btnradio2_42">2. Possuem os mesmos interesses que eu.</label>
+                      
+                        <input type="radio" class="btn-check" name="answer_42" id="btnradio3_42" autocomplete="off">
+                        <label class="btn btn-outline-primary" class="ng-binding"  for="btnradio3_42">3. Compartilham das mesmas ideias.</label>
+                        
+                        <input type="radio" class="btn-check" name="answer_42" id="btnradio4_42" autocomplete="off">
+                        <label class="btn btn-outline-primary" class="ng-binding"  for="btnradio4_42">4. São bastante diferentes de mim.</label>
+        
+                        <input type="radio" class="btn-check" name="answer_42" id="btnradio5_42" autocomplete="off">
+                        <label class="btn btn-outline-primary" class="ng-binding"  for="btnradio5_42">5. Não me preocupo com características quando procuro uma amizade.</label>
+                        <br> <br>
+                        <button id="button4_1" type="button" class="btn btn-primary ng-binding">prev</button><button id="buttonReset" type="button" class="btn btn-primary ng-binding">reset</button>
+                        <br>
+                        <div>
+                          <a href="Sprint 2.html">
+                          <button type="button" class="btn btn-primary ng-binding">Finalizar</button>
+                        </a>
+                        </div>
+                      </div>
+                    </div>
+            </section>
+
+                 
         </form>
 
 
