@@ -73,4 +73,28 @@
         z-index: 101;
         box-shadow: 2px 5px 10px black
     }
+
+    #question2,#question3,#question4{display: none;}
+
+    #bar{
+        text-align: center;
+        border-radius: 50px;
+        background-color: rgb(201, 201, 201);
+        width: 600px;
+        height: 10px;
+        padding-bottom: 0.5rem;
+    }
+    
+    #progressBar{
+        border-radius: 50px;
+        background-color: darkblue;
+        width: 0%;
+        height: 10px;
+        padding-bottom: 0.5rem;
+    }
+
+
+
+    
+
     
