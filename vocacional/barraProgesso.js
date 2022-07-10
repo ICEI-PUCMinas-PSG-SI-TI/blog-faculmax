@@ -1,4 +1,4 @@
-console.log("Hello World!! hahaha!");
+
 button1.onclick=function(){
     questionIndex = 0;
     questionIndex++;

@@ -27,7 +27,7 @@ const deletaDados = () => {
 
                 localStorage.removeItem('usuario');
                 localStorage.setItem('db', JSON.stringify(db))
-                window.location.assign('../paginaPrincipal/principal.html');
+                window.location.assign('../index.html');
             }
 
         }
@@ -53,7 +53,7 @@ function logout() {
     if (confirm('Tem certeza?')==true) {
 
         localStorage.removeItem('usuario');
-        window.location.assign('../paginaPrincipal/principal.html');
+        window.location.assign('../index.html');
     }
 }
 
@@ -74,7 +74,7 @@ const trocarSenha = () => {
                 localStorage.setItem('db', JSON.stringify(db))
                 localStorage.setItem('usuario', JSON.stringify(db))
                 localStorage.removeItem('usuario');
-                window.location.assign('../paginaPrincipal/principal.html');
+                window.location.assign('../index.html');
             }
 
         }
@@ -99,7 +99,7 @@ const trocarEmail = () => {
                 localStorage.setItem('db', JSON.stringify(db))
                 localStorage.setItem('usuario', JSON.stringify(db))
                 localStorage.removeItem('usuario');
-                window.location.assign('../paginaPrincipal/principal.html');
+                window.location.assign('../index.html');
                 }else{
                     alert("Email já está em uso")
                 }

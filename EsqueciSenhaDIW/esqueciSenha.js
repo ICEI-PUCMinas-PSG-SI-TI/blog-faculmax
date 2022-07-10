@@ -8,8 +8,6 @@ function verificarEmail(){
         alert('Campos necessários não preenchidos');
     }
  let x =  banco.registro.find(item => item.email==email);
- console.log(x);
-    debugger;
     substitui(banco.registro,email);
 }
 
@@ -19,10 +17,12 @@ function substitui(registros = [],email){
        const element = registros[index];
        if(element.email == email){
            element.senha = senha;
+          
            break;
        }
    }
    localStorage.setItem('db',JSON.stringify({registro:registros}));
+  window.location.assign('../loginDIW/login.html');
 }
 
 

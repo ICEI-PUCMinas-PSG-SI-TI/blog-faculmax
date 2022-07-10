@@ -24,7 +24,7 @@ function entrar() {
 
             localStorage.setItem('usuario', JSON.stringify({ usuario, senha, maile }));
 
-            window.location.assign('../paginaPrincipal/principal.html');
+            window.location.assign('../index.html');
             validaUser = 1;
 
         }
